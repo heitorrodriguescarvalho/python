@@ -1,0 +1,1 @@
+print('\033[0;33;44mEstou usando cores no termial de Python! \033[m')

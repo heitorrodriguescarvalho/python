@@ -1,0 +1,2 @@
+text = input('Digite algo: ')
+print(f'É formado por apenas letras: {text.isalpha()}. É formado por apenas números: {text.isnumeric()}. É formado por apenas letras e números: {text.isalnum()}. É formado por apenas letras maiúsculas: {text.isupper()}. É formado por apenas letras minúsculas:{text.islower()}.')

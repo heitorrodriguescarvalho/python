@@ -1,6 +1,6 @@
 print('-=-' *20, '\033[1;31mAprovando Finaciamento\033[m', '-=-' *20)
 
-valor = float(input('Qual é o valor da casa? '))
+valor = float(input('Qual é o valor da casa? R$'))
 valor = round(valor, 2)
 salario = float(input('Qual é o seu salário? '))
 anos = int(input('Em quantos anos você vai pagar a casa? '))

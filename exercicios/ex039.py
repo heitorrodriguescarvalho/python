@@ -1,8 +1,6 @@
 import datetime
 
-dataAtual = datetime.datetime.now()
-data = dataAtual.date()
-ano = data.year
+ano = datetime.datetime.now().date().year
 
 nasc = int(input('Em que ano você nasceu? '))
 

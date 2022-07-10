@@ -25,7 +25,8 @@ elif f == 3:
     print(f'\033[1;34mCompra realizada com sucesso\033[0;0m no valor final de \033[1;33mR${f3}\033[0;0m!')
 
 elif f == 4:
-    print(f'\033[1;34mCompra realizada com sucesso\033[0;0m no valor final de \033[1;33mR${f4}\033[0;0m!')
+    prestacoes = int(input('Em quantas \033[1;33mprestações\033[0;0m? '))
+    print(f'\033[1;34mCompra realizada com sucesso\033[0;0m no valor de \033[1;33m{prestacoes}x\033[0;0m de \033[1;33mR${valor/prestacoes:.2f}\033[0;0m!')
 
 else:
     print('\033[0;31mO valor digitado é inválido.\033[0;0m')

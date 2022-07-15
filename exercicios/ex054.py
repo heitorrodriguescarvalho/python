@@ -60,6 +60,13 @@ for c in range(0, 7):
             f'{str(birthDay).rjust(2, "0")}/{str(birthMonth).rjust(2, "0")}/{str(birthYear).rjust(2, "0")}'
         )
 
-print(f'As pessoas que nasceram nos dias \033[33m{", ".join(majority)}\033[0m, já \033[34malcaçaram a maioridade\033['
-      f'0m (21 anos).\nPorém as pessoas que nasceram nos dias \033[33m{", ".join(nonMajority)},\033[0m ainda \033['
-      f'31mnão alcançaram a maioridade\033[0m (21 anos).')
+if len(majority) == 0 and len(nonMajority) == 7:
+    print('\033[33mNinguém alcançou a maioridade\033[0m (21 anos).')
+
+elif len(majority) == 7 and len(nonMajority) == 0:
+    print('\033[34mTodos já alcançaram a maioridade\033[33m (21 anos).')
+
+else:
+    print(f'As pessoas que nasceram nos dias \033[33m{", ".join(majority)}\033[0m, já \033[34malcaçaram a maioridade'
+          f'\033[0m (21 anos).\nPorém as pessoas que nasceram nos dias \033[33m{", ".join(nonMajority)},\033[0m ainda '
+          f'\033[31mnão alcançaram a maioridade\033[0m (21 anos).')

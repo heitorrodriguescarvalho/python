@@ -16,4 +16,4 @@ if fraseReverse == frase:
     print('A frase \033[34mé um palíndromo\033[0m. ')
 
 else:
-    print('A frase \033[31mnão é um palíndromo\033[0m.')
+    print(f'A frase \033[31mnão é um palíndromo\033[0m, pois ao contrário ficaria: {"".join(fraseReverseList)}.')

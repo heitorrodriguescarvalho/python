@@ -5,26 +5,20 @@ print('-=-' * 15, '\033[31mAnalizando a Idade Média, o Homem Mais Velho '
 numPessoas = int(input('Quantas pessoas você deseja analizar? '))
 
 # Pega os dados e os coloca nas suas respectivas listas.
+# Separa a idade dos homens e das mulheres e pega o nome dos homens.
+# Pega a média das idades.
 nomes = []
 idades = []
 sexos = []
+idadesMasculino = []
+idadesFeminino = []
+nomesMasculino = []
+idadesSomadas = int(0)
 for c in range(0, numPessoas):
     nomes.append(str(input(f'Digite o nome da {c + 1}º pessoa: ')).capitalize().strip())
     idades.append(int(input(f'Digite a idade da {c + 1}º pessoa: ')))
     sexos.append(str(input(f'Digite o sexo da {c + 1}º pessoa (M/F): ')).upper().strip())
 
-# Pega a média das idades
-idadeMedia = float(0)
-for c in range(0, numPessoas):
-    idadeMedia = idadeMedia + idades[c]
-idadeMedia = idadeMedia / numPessoas
-
-# Separa a idade dos homens e das mulheres e pega o nome dos homens.
-idadesMasculino = []
-idadesFeminino = []
-nomesMasculino = []
-
-for c in range(0, numPessoas):
     if sexos[c] == 'M':
         idadesMasculino.append(idades[c])
         nomesMasculino.append(nomes[c])
@@ -34,7 +28,10 @@ for c in range(0, numPessoas):
         print('\033[31mAlgum(s) dos valores digitados na categoria "sexo" é(são) inválido(s):\n'
               'Pode ser que o resultado não seja o esperado!')
 
-# Pega o valor da maior idade.
+    idadesSomadas = idadesSomadas + idades[c]
+idadeMedia = idadesSomadas / numPessoas
+
+# Pega o valor da maior idade masculina.
 idadeMasculinoMaior = int
 for c in range(0, len(idadesMasculino)):
     if c == 0:
@@ -69,16 +66,16 @@ for c in range(0, len(idadesFeminino)):
         mulheresJovens = mulheresJovens + 1
 
 # Respostas conforme a quantidade de indivíduos.
-print(f'A idade média dos {numPessoas} indivíduos é {round(idadeMedia, 1)}')
+print(f'A idade média dos \033[33m{numPessoas} indivíduos\033[0m é \033[34m{round(idadeMedia, 1)}\033[0m')
 if len(nomesIdadeMasculinoMaior) > 1:
-    print(f'Dos {len(nomesMasculino)} homens, os mais velhos são: {homensMaisVelhos};')
+    print(f'Dos \033[33m{len(nomesMasculino)} homens\033[0m, os mais velhos são: \033[34m{homensMaisVelhos}\033[0m;')
 elif len(nomesIdadeMasculinoMaior) == 1:
-    print(f'Dos {len(nomesMasculino)} homens, o mais velhos é o {homensMaisVelhos};')
+    print(f'\033[33m{homensMaisVelhos}\033[0m é o único homem;')
 else:
-    print('Não há homens.')
+    print('\033[31mNão há homens.')
 if len(idadesFeminino) > 1:
-    print(f'Das {len(idadesFeminino)} mulheres, {mulheresJovens} possuem menos de 20 anos.')
+    print(f'Das \033[33m{len(idadesFeminino)} mulheres\033[0m, \033[34m{mulheresJovens}\033[0m têm menos de 20 anos.')
 elif len(idadesFeminino) == 1:
-    print(f'Das {len(idadesFeminino)} mulheres, {mulheresJovens} possui menos de 20 anos.')
+    print(f'De \033[33m{len(idadesFeminino)} mulher\033[0m, \033[34m{mulheresJovens}\033[0m tem menos de 20 anos.')
 else:
-    print('Não há mulheres.')
+    print('\033[31mNão há mulheres.')

@@ -38,5 +38,5 @@ print('\033[34m', num[0], end="")
 while c < len(num):
     print(',\033[34m', num[c], end="")
     c += 1
-print(f'\n\033[0mA \033[33mmédia\033[0m dos valores é \033[32m{media}\033[0m,'
+print(f'\n\033[0mA \033[33mmédia\033[0m dos valores é \033[32m{round(media, 2)}\033[0m,'
       f' o maior valor é \033[32m{maior}\033[0m e o menor é \033[32m{menor}\033[0m.')

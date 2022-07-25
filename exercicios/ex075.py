@@ -12,6 +12,8 @@ else:
 
 if num.count(3) > 0:
     print(f'O número 3 foi digitado pela primeira vez na: \033[34m{num.index(3) + 1}º posição\033[0m.')
+else:
+    print('O número 3 não foi digitado.')
 
 print('Os números pares são: \033[34m', end="")
 for pos, n in enumerate(num):

@@ -1,6 +1,6 @@
 from datetime import date
 
-print('-=-' * 15, '\033[31mFunções para Sortear e Somar\033[m', '-=-' * 15)
+print('-=-' * 15, '\033[31mFunções para Votação\033[m', '-=-' * 15)
 
 
 def voto(birthDate):
